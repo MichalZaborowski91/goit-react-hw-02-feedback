@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import css from './feedbackOptions.module.css';
 
 class FeedbackOptions extends Component {
   handleGoodBtn = () => {
@@ -13,13 +14,25 @@ class FeedbackOptions extends Component {
   render() {
     return (
       <div>
-        <button type="button" onClick={this.handleGoodBtn}>
+        <button
+          className={css.goodBtn}
+          type="button"
+          onClick={this.handleGoodBtn}
+        >
           Good
         </button>
-        <button type="button" onClick={this.handleNeutralBtn}>
+        <button
+          className={css.neutralBtn}
+          type="button"
+          onClick={this.handleNeutralBtn}
+        >
           Neutral
         </button>
-        <button type="button" onClick={this.handleBadBtn}>
+        <button
+          className={css.badBtn}
+          type="button"
+          onClick={this.handleBadBtn}
+        >
           Bad
         </button>
       </div>

@@ -1,10 +1,12 @@
 import React from 'react';
+import css from '../feedbackOptions/feedbackOptions.module.css';
+
 const Statistics = ({ good, neutral, bad }) => {
   const totalFeedback = good + neutral + bad;
   const positiveFeedback = (good / totalFeedback) * 100;
 
   return (
-    <div>
+    <div className={css.textInfo}>
       {totalFeedback > 0 ? (
         <>
           <p>Good: {good}</p>

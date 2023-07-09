@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import FeedbackOptions from 'components/feedbackOptions/feedbackOptions';
 import Statistics from 'components/statistics/statistics';
+import css from '../feedbackOptions/feedbackOptions.module.css';
 
 class SectionTitle extends Component {
   static defaultProps = {
@@ -25,7 +26,7 @@ class SectionTitle extends Component {
     const { good, neutral, bad } = this.state;
 
     return (
-      <div>
+      <div className={css.section}>
         <h1>Please leave feedback</h1>
         <FeedbackOptions
           good={good}
