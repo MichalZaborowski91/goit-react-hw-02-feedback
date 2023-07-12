@@ -8,13 +8,13 @@ const Statistics = ({ good, neutral, bad }) => {
   return (
     <div className={css.textInfo}>
       {totalFeedback > 0 ? (
-        <>
+        <div>
           <p>Good: {good}</p>
           <p>Neutral: {neutral}</p>
           <p>Bad: {bad}</p>
           <p>Total: {totalFeedback}</p>
           <p>Positive Feedback: {Math.floor(positiveFeedback)}%</p>
-        </>
+        </div>
       ) : (
         <p>There is no feedback</p>
       )}

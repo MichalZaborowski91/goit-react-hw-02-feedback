@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import FeedbackOptions from 'components/feedbackOptions/feedbackOptions';
 import Statistics from 'components/statistics/statistics';
 import css from '../feedbackOptions/feedbackOptions.module.css';
+import PropTypes from 'prop-types';
 
 class SectionTitle extends Component {
   static defaultProps = {
@@ -40,5 +41,10 @@ class SectionTitle extends Component {
     );
   }
 }
-
+SectionTitle.propTypes = {
+  step: PropTypes.number,
+  good: PropTypes.number,
+  neutral: PropTypes.number,
+  bad: PropTypes.number,
+};
 export default SectionTitle;
